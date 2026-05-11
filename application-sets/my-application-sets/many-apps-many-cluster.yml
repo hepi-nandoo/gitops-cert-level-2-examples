@@ -13,6 +13,8 @@ spec:
               revision: HEAD
               directories:
                 - path: applicationset/examples/matrix/cluster-addons/*
+          # cluster generator, 'child' #2
+          - clusters: {}
   template:
     metadata:
       name: '{{path.basename}}-{{name}}'
