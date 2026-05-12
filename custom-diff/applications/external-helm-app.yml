@@ -22,3 +22,11 @@ spec:
     syncOptions:
       - CreateNamespace=true  
    
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jqPathExpressions:
+    - .metadata.labels.creation
+  - kind: Secret
+    jqPathExpressions:
+    - .data["my-password"]
